@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"
+    ></script>
+    <title>Greenhouse Fisika Unila</title>
+
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Feather icons-->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!--My style-->
+    <link rel="stylesheet" href="../css/desaingreenhouse.css" />
+
+    <!--Style css-->
+  </head>
+  <body>
+    <!--Navbar Start-->
+    <nav class="navbar">
+      <a href="#" class="navbar-logo">Greenhouse<span>Fisika.</span></a>
+
+      <div class="navbar-nav">
+        <a href="./home.html">Home</a>
+        <a href="./Tentangkami.html">Tentang Kami</a>
+        <a href="./latarbelakang.html">Latar belakang</a>
+        <a href="#">Desain Greenhouse</a>
+        <a href="./galery.html">Desain Greenhouse</a>
+        <div class="dropdown">
+          <a href="monitoring.html" class="dropbtn">Monitoring</a>
+          <div class="dropdown-content">
+            <a href="#sensorpH">pH</a>
+            <a href="#sensorkelembapan">Kelembapan</a>
+            <a href="#sensorsuhu">Suhu</a>
+            <a href="#sensorflow">Flow</a>
+            <a href="#sensorNPK">NPK</a>
+            <!-- Tambahkan submenu sesuai kebutuhan -->
+          </div>
+        </div>
+      </div>
+
+      <div class="navbar-extra">
+        <a href="#" id="hamburger-menu"> <i data-feather="menu"></i></a>
+      </div>
+
+      <div class="container-hamburger" id="container-hamburger">
+        <div class="container-menu">
+          <a href="home.html">home</a>
+          <a href="Tentangkami.html">Tentang kami</a>
+          <a href="latarbelakang.html">Latar Belakang</a>
+          <a href="desaingreenhouse.html">Desain Greenhouse</a>
+          <a href="monitoring.html">Monitoring</a>
+        </div>
+      </div>
+    </nav>
+
+    <!--Navbar end-->
+
+    <!--Desain Greenhouse Section Start-->
+    <section id="desaingreenhouse" class="desaingreenhouse">
+      <h2><span>Desain </span>Greenhouse</h2>
+      <p>
+        Dibawah ini merupakan Desain Greenhouse Fisika FMIPA Universitas
+        Lampung.
+      </p>
+      <div class="about-img">
+        <img src="../img/desaingreenhouse.png" alt="Desain Greenhouse" />
+      </div>
+      <div class="about-video">
+        <video src="../img/videogreenhouse.mp4" width="80%" controls>
+          Video Greenhouse
+        </video>
+      </div>
+      <!--Footer Section Start-->
+      <footer>
+        <div class="credit" id="contact">
+          <p>Created by <a href="">PertanianCerdas</a>. | &copy; 2024.</p>
+        </div>
+      </footer>
+      <!--Footer Section end-->
+    </section>
+    <!--Desain Greenhouse Section end-->
+
+    <!--Feather icons-->
+    <script>
+      feather.replace();
+    </script>
+    <script src="../js/script.js">
+      console.log("test")
+    </script>
+  </body>
+</html>

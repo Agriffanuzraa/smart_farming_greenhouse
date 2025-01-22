@@ -1,0 +1,231 @@
+:root {
+  --primary: #011108;
+
+  --bg: #000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+  color: #000d06;
+}
+
+/*  Navbar  */
+
+.navbar {
+  background-color: #071b0c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 99999;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-left: 5rem;
+  color: #a9e6c3;
+  font-style: italic;
+}
+
+.navbar .navbar-logo span {
+  color: #19a857f5;
+}
+
+.navbar .navbar-nav {
+  margin-right: 5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar .navbar-nav a {
+  color: aliceblue;
+  display: inline-block;
+  font-size: 1rem;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: #19a857f5;
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid #a9e6c3;
+  transform: scaleX(0);
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+  transition: 0.5s linear;
+}
+
+.navbar .navbar-extra a {
+  color: rgb(240, 248, 255);
+  margin: 0 0.5rem;
+}
+
+/*Galery Section*/
+.container-galery {
+  margin-top: 7rem;
+  padding: 30px 100px;
+}
+
+.preview-img {
+  height: 600px;
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.galleries {
+  display: flex;
+  gap: 20px;
+}
+
+.galleries img {
+  width: 100%;
+  height: 160px;
+  cursor: pointer;
+}
+
+/* Footer Section */
+footer {
+  margin-top: 6rem;
+  display: flex;
+  width: 100%;
+  justify-content: center; /* Pusatkan teks secara horizontal */
+  align-items: center; /* Pusatkan teks secara vertikal */
+  padding: 1rem 7%;
+  color: white; /* Tambahkan warna teks */
+}
+
+/* Dropdown styles */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Style the dropdown button */
+.dropbtn {
+  color: aliceblue;
+  display: inline-block;
+  font-size: 1rem;
+  margin: 0 0.5rem;
+  cursor: pointer;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  margin-top: 7px;
+  border-radius: 10%;
+  background-color: hsla(134, 33%, 38%, 0.486);
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: aliceblue;
+  padding: 12px 16px;
+  display: block;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.dropdown-content a:hover {
+  color: black;
+}
+
+/* Show the dropdown menu on hover */
+/* .dropdown:hover .dropdown-content {
+      display: block;
+    }  */
+
+.navbar .navbar-extra {
+  display: none;
+}
+
+.navbar .container-hamburger {
+  display: none;
+}
+
+#hamburger-menu {
+  display: none;
+}
+/* Media Queris */
+
+/* Laptop */
+@media (max-width: 1024px) {
+  .navbar .navbar-logo {
+    margin-left: 2rem;
+  }
+
+  .navbar .navbar-nav {
+    margin-right: 0rem;
+    gap: 0rem;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    display: none;
+  }
+
+  .navbar .navbar-extra {
+    display: inline-block;
+  }
+
+  .navbar .container-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .navbar .container-hamburger {
+    display: flex;
+    flex-direction: column;
+    background-color: #071b0c;
+    padding: 1rem;
+    top: 5rem;
+    position: absolute;
+    right: -1000px;
+  }
+
+  .navbar .container-hamburger a {
+    color: white;
+  }
+
+  .navbar {
+    padding: 1rem;
+  }
+}
+
+/* Handphone*/
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+}

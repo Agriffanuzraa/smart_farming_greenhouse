@@ -1,0 +1,490 @@
+:root {
+  --primary: #011108;
+
+  --bg: #000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+  color: #000d06;
+}
+
+/*  Navbar  */
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: #071b0c;
+  border-bottom: 1px solid #00000067;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99999;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #a9e6c3;
+  font-style: italic;
+}
+
+.navbar .navbar-logo span {
+  color: #19a857f5;
+}
+
+.navbar .navbar-nav a {
+  color: aliceblue;
+  display: inline-block;
+  font-size: 1rem;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: #19a857f5;
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid #a9e6c3;
+  transform: scaleX(0);
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+  transition: 0.5s linear;
+}
+
+.navbar .navbar-extra a {
+  color: rgb(240, 248, 255);
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--primary);
+}
+
+/* Tambahkan di bagian CSS Anda */
+
+/* Dropdown styles */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Style the dropdown button */
+.dropbtn {
+  color: aliceblue;
+  display: inline-block;
+  font-size: 1rem;
+  margin: 0 0.5rem;
+  cursor: pointer;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  margin-top: 7px;
+  border-radius: 10%;
+  background-color: hsla(134, 33%, 38%, 0.486);
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: aliceblue;
+  padding: 12px 16px;
+  display: block;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.dropdown-content a:hover {
+  color: black;
+}
+
+/* Show the dropdown menu on hover */
+/* .dropdown:hover .dropdown-content {
+    display: block;
+  }  */
+
+#hamburger-menu {
+  display: none;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  align-items: center;
+  background-image: url(../img/header-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* .hero::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    bottom: 0;
+    background: linear-gradient(
+      0deg,
+      rgba(1, 1, 3, 0.1) 3%,
+ rgba(235, 221, 221, 0) 50%
+    );
+  } */
+
+.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 50rem;
+}
+
+.hero .content h1 {
+  margin-top: 9rem;
+  font-size: 2.5em;
+  color: aliceblue;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3.5);
+  line-height: 1.2;
+}
+
+.hero .content h1 span {
+  color: #19a857f5;
+}
+
+.hero .content p {
+  font-size: 1rem;
+  color: white;
+  margin-top: 1rem;
+  line-height: 1;
+  font-weight: 300;
+  text-shadow: 2px 2px 5px rgba(1, 1, 3.5);
+  /*mix-blend-mode: difference;*/
+}
+
+.hero .content .cta {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 0.8rem 1.7rem;
+  font-size: 1rem;
+  color: aliceblue;
+  background-color: #071b0c;
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+/* About Section */
+.about {
+  position: relative;
+  overflow: hidden;
+  padding: 7rem 7% 1.4rem;
+}
+
+.about .background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.about .background-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(20px); /* Optional: Menambahkan efek blur pada latar belakang */
+}
+
+.about h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 1rem;
+  color: aliceblue;
+  mix-blend-mode: difference;
+}
+
+.about h3 span {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: aliceblue;
+  mix-blend-mode: difference;
+}
+
+.about h2 span {
+  color: #a9e6c3;
+  mix-blend-mode: difference;
+}
+
+.about p {
+  text-align: Justify;
+  font-size: 1rem;
+  font-weight: 800;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.about .row {
+  display: flex;
+  color: aliceblue;
+}
+
+.about .row .about-img {
+  flex: 1 1 5rem;
+  margin-bottom: 1rem;
+}
+
+.about .row .about-img img {
+  width: 90%;
+}
+
+.about .row .content {
+  flex: 1 1 50rem;
+  padding: 0 1rem;
+}
+
+.about .row .content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #011108;
+}
+
+.about .row .content p {
+  margin-bottom: 0.8rem;
+  color: #011108;
+  font-size: 1rem;
+  font-weight: 800;
+  display: flex;
+  line-height: 1.5;
+}
+
+.about .rowdosen {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+.about .rowdosen .img-dosen {
+  text-align: center;
+}
+
+.about .rowdosen .img-dosen img {
+  border-radius: 50%;
+  width: 120px;
+}
+
+/*.about .row .img-dosen {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    justify-content: center;
+    text-align: center;
+  }*/
+
+/*.about .row .img-dosen img {
+    border-radius: 50%;
+    width: 100%;
+  }*/
+
+.about h4 {
+  text-align: left;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #011108;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+/* Section Latar Belakang */
+.latarbelakang,
+.desaingreenhouse,
+.monitoring {
+  padding: 6rem 7% 1.4rem;
+}
+
+.latarbelakang h2,
+.desaingreenhouse h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 1rem;
+  color: aliceblue;
+}
+
+.latarbelakang p {
+  text-align: justify;
+  font-size: 1rem;
+  color: aliceblue;
+  margin-top: 4rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+  font-weight: 300;
+  text-shadow: 2px 2px 5px rgba(1, 1, 3.5);
+  /*mix-blend-mode: difference;*/
+}
+
+.desaingreenhouse p {
+  text-align: justify;
+  font-size: 1rem;
+  color: aliceblue;
+  margin-top: 1rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+  font-weight: 300;
+  text-shadow: 2px 2px 5px rgba(1, 1, 3.5);
+  /*mix-blend-mode: difference;*/
+}
+
+/*.latarbelakang h3 span {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: aliceblue;
+  }*/
+
+.latarbelakang h2 span,
+.desaingreenhouse h2 span,
+.monitoring h2 span {
+  color: #a9e6c3;
+}
+
+/* Section Desain Greenhouse */
+.desaingreenhouse .about-img img {
+  max-width: 100%;
+  margin-left: 10%;
+  width: 80%; /* Ganti nilai ini sesuai kebutuhan */
+  height: auto; /* Menjaga aspek rasio gambar */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* Ganti nilai ini sesuai kebutuhan */
+}
+
+.desaingreenhouse .about-video video {
+  max-width: 100%;
+  margin-left: 10%;
+}
+
+/* Section Monitoring */
+.monitoring .sensor h3 {
+  text-align: left;
+  font-size: 2.6rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.monitoring .container h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: aliceblue;
+}
+
+/* Footer Section */
+footer {
+  margin-top: 6rem;
+  display: flex;
+  width: 100%;
+  justify-content: center; /* Pusatkan teks secara horizontal */
+  align-items: center; /* Pusatkan teks secara vertikal */
+  padding: 1rem 7%;
+  color: white; /* Tambahkan warna teks */
+}
+
+/* Media Queris */
+
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 96%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #071b0c;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.5s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: #ffffff;
+    display: block;
+    margin: 1rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+
+  .about .row {
+    flex-wrap: wrap;
+  }
+
+  .about .row .about-img img {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .about .row .content {
+    padding: 0;
+    margin-top: 0.5rem;
+  }
+
+  .about .row .content h3 {
+    margin-top: 0rem;
+    font-size: 1.7rem;
+  }
+}
+
+/* Handphone*/
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+}

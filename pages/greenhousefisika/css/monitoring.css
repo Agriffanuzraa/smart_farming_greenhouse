@@ -1,0 +1,264 @@
+:root {
+  --primary: #011108;
+
+  --bg: #000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+  color: #000d06;
+}
+
+/*  Navbar  */
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: #071b0c;
+  border-bottom: 1px solid #00000067;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99999;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #a9e6c3;
+  font-style: italic;
+}
+
+.navbar .navbar-logo span {
+  color: #19a857f5;
+}
+
+.navbar .navbar-nav a {
+  color: aliceblue;
+  display: inline-block;
+  font-size: 1rem;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: #19a857f5;
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid #a9e6c3;
+  transform: scaleX(0);
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+  transition: 0.5s linear;
+}
+
+.navbar .navbar-extra a {
+  color: rgb(240, 248, 255);
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--primary);
+}
+
+/* Tambahkan di bagian CSS Anda */
+
+/* Dropdown styles */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Style the dropdown button */
+.dropbtn {
+  color: aliceblue;
+  display: inline-block;
+  font-size: 1rem;
+  margin: 0 0.5rem;
+  cursor: pointer;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  margin-top: 7px;
+  border-radius: 10%;
+  background-color: hsla(134, 33%, 38%, 0.486);
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: aliceblue;
+  padding: 12px 16px;
+  display: block;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.dropdown-content a:hover {
+  color: black;
+}
+
+/* Show the dropdown menu on hover */
+/* .dropdown:hover .dropdown-content {
+    display: block;
+  }  */
+
+#hamburger-menu {
+  display: none;
+}
+
+/* Section Latar Belakang */
+.monitoring {
+  padding: 6rem 7% 1.4rem;
+}
+
+.monitoring h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 1rem;
+  color: aliceblue;
+}
+
+.monitoring h2 span {
+  color: #a9e6c3;
+}
+
+/* Section Desain Greenhouse */
+.desaingreenhouse .about-img img {
+  max-width: 100%;
+  margin-left: 10%;
+  width: 80%; /* Ganti nilai ini sesuai kebutuhan */
+  height: auto; /* Menjaga aspek rasio gambar */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* Ganti nilai ini sesuai kebutuhan */
+}
+
+.desaingreenhouse .about-video video {
+  max-width: 100%;
+  margin-left: 10%;
+}
+
+/* Section Monitoring */
+.monitoring .sensor h3 {
+  text-align: left;
+  font-size: 2.6rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.monitoring .container h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: aliceblue;
+}
+
+/* Footer Section */
+footer {
+  margin-top: 10px;
+  display: flex;
+  width: 100%;
+  justify-content: center; /* Pusatkan teks secara horizontal */
+  align-items: center; /* Pusatkan teks secara vertikal */
+  padding: 1rem 7%;
+  color: white; /* Tambahkan warna teks */
+}
+
+/* Media Queris */
+
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 96%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #071b0c;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.5s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: #ffffff;
+    display: block;
+    margin: 1rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+
+  .about .row {
+    flex-wrap: wrap;
+  }
+
+  .about .row .about-img img {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .about .row .content {
+    padding: 0;
+    margin-top: 0.5rem;
+  }
+
+  .about .row .content h3 {
+    margin-top: 0rem;
+    font-size: 1.7rem;
+  }
+}
+
+/* Handphone*/
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+}

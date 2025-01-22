@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+    <title>Greenhouse Fisika Unila</title>
+
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Feather icons-->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!--My style-->
+    <link rel="stylesheet" href="../css/monitoring.css" />
+
+    <!--Style css-->
+
+
+  <script src="script.js"></script>
+
+  </head>
+  <body>
+    
+<!--Navbar Start-->
+<nav class="navbar">
+    <a href="#" class="navbar-logo">Greenhouse<span>Fisika.</span></a>
+
+    <div class="navbar-nav">
+      <a href="./home.html">Home</a>
+      <a href="./Tentangkami.html">Tentang Kami</a>
+      <a href="./latarbelakang.html">Latar belakang</a>
+      <a href="./desaingreenhouse.html">Desain Greenhouse</a>
+      <div class="dropdown">
+        <a href="#" class="dropbtn">Monitoring</a>
+        <div class="dropdown-content">
+          <a href="#sensorpH">pH</a>
+          <a href="#sensorkelembapan">Kelembapan</a>
+          <a href="#sensorsuhu">Suhu</a>
+          <a href="#sensorflow">Flow</a>
+          <a href="#sensorNPK">NPK</a>
+          <!-- Tambahkan submenu sesuai kebutuhan -->
+        </div>
+    </div>
+
+
+    <div class="navbar-extra">
+      <a href="#" id="hamburger-menu"> <i data-feather="menu"></i></a>
+    </div>
+  </nav>
+  <!--Navbar end-->
+
+    <!--Monitoring Section Start-->
+    <section id="monitoring" class="monitoring">
+      <h2><span>Monitoring </span>Greenhouse</h2>
+    <div class="sensor" id="sensorsuhu">
+      <h3>Data sensor suhu dan kelembapan tanah</h3>
+      <canvas id="chart1" style="width: 100%; height: 65vh; background: #333; border: 1px solid #555652; margin-top: 10px;"></canvas>
+    </div>
+    <div class="sensor" id="sensorpH">
+      <h3>Data sensor pH</h3>
+      <canvas
+          id="chart2"
+          style="
+            width: 100%;
+            height: 65vh;
+            background: #444;
+            border: 1px solid #555652;
+            margin-top: 20px;
+          "
+        ></canvas>
+    </div>
+    <div class="sensor" id="sensorflow">
+      <h3>Data sensor Flow</h3>
+      <canvas
+            id="chart3"
+            style="
+              width: 100%;
+              height: 65vh;
+              background: #555;
+              border: 1px solid #555652;
+              margin-top: 10px;
+            "
+          ></canvas>
+    </div>
+    <div class="sensor" id="sensorNPK">
+      <h3>Data sensor NPK</h3>
+      <canvas
+      id="chart"
+      style="
+        width: 100%;
+        height: 65vh;
+        background: #222;
+        border: 1px solid #555652;
+        margin-top: 10px;
+      "
+    ></canvas>
+    </div>
+        <!--Footer Section Start-->
+        <footer>
+            <div class="credit" id="contact">
+              <p>Created by <a href="">PertanianCerdas</a>. | &copy; 2024. </p> 
+            </div>
+          </footer>
+          <!--Footer Section end-->
+    <!--Monitoring Section End-->
+
+
+
+    <!--Feather icons-->
+    <script>
+      feather.replace();
+    </script>
+
+    <!--My Javascript-->
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,3 @@
+$query =mysqli_query($mysqli, "UPDATE `aktuator` SET `id`= id,`relay1`= relay1,`relay2`= relay2 ,`relay3`= $relay3 WHERE 1");
+$query =mysqli_query($mysqli, "UPDATE `aktuator` SET `id`= id,`relay1`= relay1,`relay2`= $relay2 ,`relay3`= relay3 WHERE 1");
+$query =mysqli_query($mysqli, "UPDATE `aktuator` SET `id`= id,`relay1`= $relay1,`relay2`= relay2 ,`relay3`= relay3 WHERE 1");

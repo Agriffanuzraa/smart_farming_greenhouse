@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"
+    ></script>
+    <title>Greenhouse Fisika Unila</title>
+
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Feather icons-->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!--My style-->
+    <link rel="stylesheet" href="../css/galery.css" />
+
+    <!--Style css-->
+  </head>
+  <body>
+    <!--Navbar Start-->
+    <nav class="navbar">
+      <a href="#" class="navbar-logo">Greenhouse<span>Fisika.</span></a>
+
+      <div class="navbar-nav">
+        <a href="#home">Home</a>
+        <a href="./Tentangkami.html">Tentang Kami</a>
+        <a href="./latarbelakang.html">Latar belakang</a>
+        <a href="./desaingreenhouse.html">Desain Greenhouse</a>
+        <a href="#">Galery</a>
+        <div class="dropdown">
+          <a href="monitoring.html" class="dropbtn">Monitoring</a>
+          <div class="dropdown-content">
+            <a href="#sensorpH">pH</a>
+            <a href="#sensorkelembapan">Kelembapan</a>
+            <a href="#sensorsuhu">Suhu</a>
+            <a href="#sensorflow">Flow</a>
+            <a href="#sensorNPK">NPK</a>
+            <!-- Tambahkan submenu sesuai kebutuhan -->
+          </div>
+        </div>
+      </div>
+
+      <div class="navbar-extra">
+        <a href="#" id="hamburger-menu"> <i data-feather="menu"></i></a>
+      </div>
+
+      <div class="container-hamburger" id="container-hamburger">
+        <div class="container-menu">
+          <a href="home.html">home</a>
+          <a href="Tentangkami.html">Tentang kami</a>
+          <a href="latarbelakang.html">Latar Belakang</a>
+          <a href="desaingreenhouse.html">Desain Greenhouse</a>
+          <a href="galery.html">Galery</a>
+          <a href="monitoring.html">Monitoring</a>
+        </div>
+      </div>
+    </nav>
+
+    <!--Navbar end-->
+
+    <!--Galery Section Start-->
+    <section id="galery" class="galery">
+      <h2><span>Galery </span>Greenhouse</h2>
+      <div class="container-galery">
+        <img
+          src="../img/img-1.png"
+          class="preview-img"
+          id="preview-img"
+          alt="gambar 1"
+        />
+      </div>
+
+      <div class="galleries">
+        <img src="../img/img-1.png" onclick="imgPreview(this.src)" alt="" />
+        <img src="../img/img-2.png" onclick="imgPreview(this.src)" alt="" />
+        <img src="../img/img-3.png" onclick="imgPreview(this.src)" alt="" />
+        <img src="../img/img-4.png" onclick="imgPreview(this.src)" alt="" />
+        <img src="../img/img-5.png" onclick="imgPreview(this.src)" alt="" />
+        <img src="../img/img-6.png" onclick="imgPreview(this.src)" alt="" />
+        <img src="../img/img-7.png" onclick="imgPreview(this.src)" alt="" />
+        <img src="../img/img-8.png" onclick="imgPreview(this.src)" alt="" />
+        <img src="../img/img-9.png" onclick="imgPreview(this.src)" alt="" />
+        <img src="../img/img-10.png" onclick="imgPreview(this.src)" alt="" />
+        <img src="../img/img-11.png" onclick="imgPreview(this.src)" alt="" />
+        <img src="../img/img-12.png" onclick="imgPreview(this.src)" alt="" />
+        <img src="../img/img-13.png" onclick="imgPreview(this.src)" alt="" />
+        <img src="../img/img-14.png" onclick="imgPreview(this.src)" alt="" />
+        <img src="../img/img-15.png" onclick="imgPreview(this.src)" alt="" />
+        <img src="../img/img-16.png" onclick="imgPreview(this.src)" alt="" />
+        <img src="../img/img-17.png" onclick="imgPreview(this.src)" alt="" />
+      </div>
+      <!--Footer Section Start-->
+      <footer>
+        <div class="credit" id="contact">
+          <p>Created by <a href="">PertanianCerdas</a>. | &copy; 2024.</p>
+        </div>
+      </footer>
+      <!--Footer Section end-->
+    </section>
+    <!--Desain Greenhouse Section end-->
+
+    <!--Feather icons-->
+    <script>
+      feather.replace();
+    </script>
+    <script src="../js/script.js">
+      console.log("test")
+    </script>
+    <script>
+      const imgPreview = (src) => {
+        document.getElementById("preview-img").src = src;
+      };
+    </script>
+  </body>
+</html>
